@@ -1,38 +1,39 @@
-.App {
+h1 {
+  color: #383a72;
+  text-align: center;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.questions {
+  list-style: none;
+  margin: 2rem;
+  padding: 0px;
+}
+.questions li {
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+  color: #383a72;
+  padding: 1rem;
+  font-size: 20px;
+  border-radius: 10px;
+  width: 800px;
+  margin-left: 270px;
+}
+.form-class {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-class input {
+  height: 2rem;
+  width: 18rem;
+  border-radius: 10px;
 }
+.form-class button {
+  height: 2.3rem;
+  width: 8rem;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 0.8rem;
+  margin: 0.5rem;
+  border-radius: 10px;
+  background-color: #383a72;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useState } from "react";
+import Questions from "./Questions";
+import NewQuestions from "./NewQuestions";
+const App = () => {
+  const [myInterview, setMyInterview] = useState([
+    { text: "What is React.js?" },
+    { text: "What you mean by state?" },
+    { text: "What is props?" },
+    { text: "What is JSX?" },
+    { text: "What you mean by spread operator?" },
+    { text: "What is the difference between Framework and Libraries?" },
+  ]);
 
-function App() {
+  const addNewQuestions = (newData) => {
+    // setMyInterview(myInterview.concat(newData));
+    setMyInterview((prevQuestion) => {
+      return prevQuestion.concat(newData);
+    });
+    //   return prevQuestions.concat(newData);
+    // interQuestions.push(newData);
+    // console.log(interQuestions);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1>Interview Questions</h1>
+      <NewQuestions onAddGoal={addNewQuestions} />
+      <Questions test={myInterview} />
     </div>
   );
-}
-
+};
 export default App;
